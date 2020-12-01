@@ -1,0 +1,27 @@
+{
+  "name": "UniList",
+  "version": "1.0.0",
+  "description": "Backend do projeto integrador do curso da Digital House",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phfedev/UniList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phfedev/UniList/issues"
+  },
+  "homepage": "https://github.com/phfedev/UniList#readme"
+}
