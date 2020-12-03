@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --bgColor: #000000;
+  --txtColor: #2f80ed;
+  --titleColor: rgba(0, 0, 255, 0.835);
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.pageContent {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/landingImage.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+.pageCover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+h1 {
+  color: var(--titleColor);
+  margin: 0;
+  padding: 0;
+  font-size: 6em;
+  font-weight: bolder;
+  margin-left: 1em;
+}
+h2,
+h3,
+p {
+  color: var(--txtColor);
+  font-family: Roboto;
+}
+
+h2 {
+  margin-left: 2em;
+}
+h3.slogan {
+  font-style: oblique;
+  font-size: 3em;
+  text-align: center;
+}
+.mainMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: flex-end;
+}
+p {
+  font-size: xx-large;
+}
+a {
+  text-decoration: none;
+}
+@media (max-width: 480px) {
+  h1,
+  h2,
+  h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .landingPage {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .mainMenu {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+  }
+  p {
+    margin: 0.5em;
+  }
+  .pageContent {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/landingImage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+  .pageCover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 0;
+  }
+
+  .footer {
+    height: 8em;
+    margin-top: 2em;
+    background-color: var(--bgColor);
+  }
+  .menuOptions {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 78%;
+    margin-left: 10%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+  }
+}
