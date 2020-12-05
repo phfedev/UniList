@@ -23,16 +23,36 @@ async function montarLista(page = 0) {
        ulElement.innerHTML = ''
     }
   let response = await fetch(
-    `${url}&fields=id,school.name&per_page=20&page=${page}`
+    `${url}&fields=id,school,location&per_page=20&page=${page}&keys_nested=true`
   );
   let data = await response.json();
   pageIn.innerHTML = `Página: ${data.metadata.page + 1}`;
   console.log(data);
   data.results.map((lilist) => {
     console.log(Object.keys(lilist)[0]);
-    var li = document.createElement("li");
-    
-    ulElement.appendChild(li).innerHTML = lilist["school.name"];
+    var liSchool = document.createElement("li");
+    liSchool.classList.add('card-li')
+
+    var schoolName = document.createElement("h1");
+    liSchool.appendChild(schoolName).innerHTML = lilist.school.name;
+
+    var schoolCity = document.createElement("h2");
+    liSchool.appendChild(schoolCity).innerHTML = lilist.school.city;
+
+    var schoolSite = document.createElement("a");
+    schoolSite.classList.add('link-site')
+    schoolSite.target = '_blank'
+    schoolSite.innerText = "Link"
+    if(lilist.school.school_url.includes("https" || "http")){
+        schoolSite.setAttribute('href',`${lilist.school.school_url}`)  
+    }else {
+        schoolSite.setAttribute('href',`https://${lilist.school.school_url}`)  
+    }
+    liSchool.appendChild(schoolSite);
+
+    var schoolState = document.createElement("h2");
+    liSchool.appendChild(schoolState).innerHTML = lilist.school.state;
+    ulElement.appendChild(liSchool)
   });
   // return data;
 }
