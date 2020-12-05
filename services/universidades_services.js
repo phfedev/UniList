@@ -23,7 +23,7 @@ async function montarLista(page = 0) {
        ulElement.innerHTML = ''
     }
   let response = await fetch(
-    `${url}&fields=id,school,location&per_page=20&page=${page}&keys_nested=true`
+    `${url}&fields=id,school,location&per_page=12&page=${page}&keys_nested=true`
   );
   let data = await response.json();
   pageIn.innerHTML = `Página: ${data.metadata.page + 1}`;
@@ -32,12 +32,15 @@ async function montarLista(page = 0) {
     console.log(Object.keys(lilist)[0]);
     var liSchool = document.createElement("li");
     liSchool.classList.add('card-li')
+    
+    var schoolCity = document.createElement("h2");
+    liSchool.appendChild(schoolCity).innerHTML = `${lilist.school.city.toUpperCase()}, ${lilist.school.state}`;
 
     var schoolName = document.createElement("h1");
     liSchool.appendChild(schoolName).innerHTML = lilist.school.name;
 
-    var schoolCity = document.createElement("h2");
-    liSchool.appendChild(schoolCity).innerHTML = lilist.school.city;
+    var hrSchool = document.createElement('hr')
+    liSchool.appendChild(hrSchool)
 
     var schoolSite = document.createElement("a");
     schoolSite.classList.add('link-site')
@@ -50,8 +53,8 @@ async function montarLista(page = 0) {
     }
     liSchool.appendChild(schoolSite);
 
-    var schoolState = document.createElement("h2");
-    liSchool.appendChild(schoolState).innerHTML = lilist.school.state;
+    // var schoolState = document.createElement("h2");
+    // liSchool.appendChild(schoolState).innerHTML = lilist.school.state;
     ulElement.appendChild(liSchool)
   });
   // return data;

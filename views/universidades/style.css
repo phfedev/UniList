@@ -1,4 +1,7 @@
-
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: #F9F9F9;
+}
 
 #listUl{
     display: flex;
@@ -8,14 +11,15 @@
 }
 
 .card-li{
-    background-color: #0000ff38;
+    background-color: white;
     color: #1d1111;
     text-decoration: none;
     list-style: none;
-    text-align: center;
     flex: 1 0 20%;
     margin: 1em;
     height: 15em;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em #888888;
+    padding: 1em;
 }
 
 .card-li h1 {
