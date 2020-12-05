@@ -19,9 +19,9 @@ pagePrev.addEventListener("click", () => {
 
 //Busca a lista de universidades da api
 async function montarLista(page = 0) {
-    if (ulElement.hasChildNodes()) {
-       ulElement.innerHTML = ''
-    }
+  if (ulElement.hasChildNodes()) {
+    ulElement.innerHTML = "";
+  }
   let response = await fetch(
     `${url}&fields=id,school,location&per_page=12&page=${page}&keys_nested=true`
   );
@@ -31,31 +31,47 @@ async function montarLista(page = 0) {
   data.results.map((lilist) => {
     console.log(Object.keys(lilist)[0]);
     var liSchool = document.createElement("li");
-    liSchool.classList.add('card-li')
-    
+    liSchool.classList.add("card-li");
+
     var schoolCity = document.createElement("h2");
-    liSchool.appendChild(schoolCity).innerHTML = `${lilist.school.city.toUpperCase()}, ${lilist.school.state}`;
+    liSchool.appendChild(
+      schoolCity
+    ).innerHTML = `${lilist.school.city.toUpperCase()}, ${lilist.school.state}`;
 
     var schoolName = document.createElement("h1");
     liSchool.appendChild(schoolName).innerHTML = lilist.school.name;
 
-    var hrSchool = document.createElement('hr')
-    liSchool.appendChild(hrSchool)
+    var divSchool = document.createElement("div");
+    divSchool.classList.add("solid");
+    liSchool.appendChild(divSchool);
+
+    var destaquesSchool = document.createElement("h3");
+    destaquesSchool.innerHTML = `Destaques:`;
+    liSchool.appendChild(destaquesSchool);
+    var taxaSchool = document.createElement("h3");
+    taxaSchool.innerHTML = `Taxa de graduação: <span>100%</span>`;
+    liSchool.appendChild(taxaSchool);
+    var salarioSchool = document.createElement("h3");
+    salarioSchool.innerHTML = `Salário pós-termino: <span>$21k-26k</span>`;
+    liSchool.appendChild(salarioSchool);
+    var custoSchool = document.createElement("h3");
+    custoSchool.innerHTML = `Custo médio anual: <span>8k</span>`;
+    liSchool.appendChild(custoSchool);
 
     var schoolSite = document.createElement("a");
-    schoolSite.classList.add('link-site')
-    schoolSite.target = '_blank'
-    schoolSite.innerText = "Link"
-    if(lilist.school.school_url.includes("https" || "http")){
-        schoolSite.setAttribute('href',`${lilist.school.school_url}`)  
-    }else {
-        schoolSite.setAttribute('href',`https://${lilist.school.school_url}`)  
+    schoolSite.classList.add("link-site");
+    schoolSite.target = "_blank";
+    schoolSite.innerText = "Link";
+    if (lilist.school.school_url.includes("https" || "http")) {
+      schoolSite.setAttribute("href", `${lilist.school.school_url}`);
+    } else {
+      schoolSite.setAttribute("href", `https://${lilist.school.school_url}`);
     }
     liSchool.appendChild(schoolSite);
 
     // var schoolState = document.createElement("h2");
     // liSchool.appendChild(schoolState).innerHTML = lilist.school.state;
-    ulElement.appendChild(liSchool)
+    ulElement.appendChild(liSchool);
   });
   // return data;
 }
