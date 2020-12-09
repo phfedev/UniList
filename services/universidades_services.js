@@ -1,7 +1,8 @@
 // var axios = require('axios');
 
 const key = "ChDfb7XOnV6TiFoQ15INAyqWxsPWalaIJzB5kWaY";
-const url = `https://api.data.gov/ed/collegescorecard/v1/schools?api_key=${key}`;
+/*const url = `https://api.data.gov/ed/collegescorecard/v1/schools?api_key=${key}`;*/
+const url =`https://api.data.gov/ed/collegescorecard/v1/schools?keys_nested=true&api_key=${key}`
 let ulList = [];
 let ulElement = document.getElementById("listUl");
 let pageCount = 0;
@@ -23,13 +24,16 @@ async function montarLista(page = 0) {
     ulElement.innerHTML = "";
   }
   let response = await fetch(
-    `${url}&fields=id,school,location&per_page=12&page=${page}&keys_nested=true`
+    /*`${url}&fields=id,school,location&per_page=12&page=${page}&keys_nested=true`*/
+    `${url}&&fields=id,latest,school,location&per_page=12&page=${page}&keys_nested=true`
   );
   let data = await response.json();
+
   pageIn.innerHTML = `Página: ${data.metadata.page + 1}`;
-  console.log(data);
-  data.results.map((lilist) => {
-    console.log(Object.keys(lilist)[0]);
+  
+  data.results.map((lilist, index) => {
+    console.log(lilist.latest);
+    /*console.log(Object.keys(lilist)[0]);*/
     var liSchool = document.createElement("li");
     liSchool.classList.add("card-li");
 
@@ -46,16 +50,47 @@ async function montarLista(page = 0) {
     liSchool.appendChild(divSchool);
 
     var destaquesSchool = document.createElement("h3");
-    destaquesSchool.innerHTML = `Destaques:`;
+    destaquesSchool.innerHTML = `<b>Destaques:</b>`;
     liSchool.appendChild(destaquesSchool);
     var taxaSchool = document.createElement("h3");
-    taxaSchool.innerHTML = `Taxa de graduação: <span>100%</span>`;
+    var consumer_rate = lilist.latest.completion.consumer_rate;
+    /*console.log(consumer_rate);*/
+    if (consumer_rate == null){
+      consumer_rate = 'N/A';
+      percent = "";
+    } else{
+      consumer_rate = Math.round(consumer_rate*100);
+      percent = "%";
+    }
+    taxaSchool.innerHTML = `Taxa de graduação: <span>${consumer_rate}${percent}</span>`;
     liSchool.appendChild(taxaSchool);
     var salarioSchool = document.createElement("h3");
-    salarioSchool.innerHTML = `Salário pós-termino: <span>$21k-26k</span>`;
+    /*var earnings = lilist.latest.earnings.6_yrs_after_entry;*/
+    var earnings = null;
+    console.log(`Earnings: ${earnings}`);
+    if (earnings == null){
+      dolar = "";
+      earnings = 'N/A';
+      thousand = "";
+    } else{
+      dolar = "$";
+      earnings = Math.round(earnings/1000);
+      thousand = "%";
+    }
+    salarioSchool.innerHTML = `Salário médio pós-termino: <span>${dolar}${earnings}${thousand}</span>`;
     liSchool.appendChild(salarioSchool);
     var custoSchool = document.createElement("h3");
-    custoSchool.innerHTML = `Custo médio anual: <span>8k</span>`;
+    var expenses = lilist.latest.cost.avg_net_price.overall;
+    if (expenses == null){
+      dolar ="";
+      expenses = 'N/A';
+      thousand = "";
+    } else{
+      dolar ="$";
+      expenses = Math.round(expenses/1000);
+      thousand = "k";
+    }
+    custoSchool.innerHTML = `Custo médio anual: <span>${dolar}${expenses}${thousand}</span>`;
     liSchool.appendChild(custoSchool);
 
     var schoolSite = document.createElement("a");
@@ -76,3 +111,9 @@ async function montarLista(page = 0) {
   // return data;
 }
 montarLista();
+
+function search(){
+  let textSearch = document.getElementById('textSearch').value;
+  console.log(textSearch);
+
+}

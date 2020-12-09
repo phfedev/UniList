@@ -2,7 +2,9 @@ body {
   font-family: "Mulish", sans-serif;
   background-color: #f9f9f9;
 }
-
+#list{
+  margin-top: 5em;
+}
 #listUl {
   display: flex;
   flex-direction: row;
