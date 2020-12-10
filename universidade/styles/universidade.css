@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+.titulo{
+    font-size: 25px;
+    font-family: Roboto;
+    color: #3C64B1;
+    margin-bottom: 2vh;
+}
+
+
+.header-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 5vh 10vw 5vh 10vw;
+
+}
+
+.nome-universidade {
+    font-size: 45px;
+    font-family: Roboto;
+    color: #3C64B1;
+    margin-top: 2.5vh;
+    margin-bottom: 0;
+    padding: 0;
+    
+}
+
+.website-universidade {
+    color: #3C64B1;
+    margin-bottom: 0;
+}
+
+.endereco-universidade{
+    margin-top: 0.5vh;
+}
+
+.btn-review{
+    background-color: #ffa500;
+    border: none;
+    color: white;
+    padding: 1vh 1vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+    display: inline-block;
+    font-size: 18px;
+    height: 7vh;
+    margin: auto 0.5vw auto auto;
+}
+
+.btn-review:hover{
+    background-color: #c07d00;
+}
+
+.infos-relevantes {
+    list-style-type: circle;
+    font-family: Roboto;
+    margin: 5vh 10vw 5vh 10vw;
+    padding: 0;
+}
+
+.reviews{
+    margin: 5vh 10vw 5vh 10vw;
+    padding: 5vh 5vw 5vh 5vw;
+    border: 1px solid #3C64B1;
+}
+
+#reviews-list{
+    list-style: none;
+}
+
+.review{
+    margin: 3vh 0 3vh 0;
+}
+
+.nome-review{
+    font-family: Roboto;
+    font-size: 20px;
+    color: #3C64B1;
+    margin-bottom: 1vh;
+}
+
+.comentario-review{
+    font-family: Roboto;
+    font-size: 15;
+}
+
+#form-review{
+    margin: 5vh 10vw 5vh 10vw;
+    padding: 5vh 5vw 5vh 5vw;
+    border: 1px solid #3C64B1;
+    font-family: Roboto;
+}
+
+.btn-submit{
+    background-color: #ffa500;
+    border: none;
+    color: white;
+    padding: 1vh 1vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+    display: inline-block;
+    font-size: 18px;
+    height: 5vh;
+    cursor: pointer;
+}
+
+.btn-submit:hover{
+    background-color: #c07d00;
+}

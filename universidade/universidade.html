@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/universidade.css">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    
+    <title>UniList</title>
+</head>
+    <body>
+        <section>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                <a class="navbar-brand" href="#"><strong>LOGO</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Universidades <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                    <button class="btn my-2 my-sm-0 btn--search" type="submit">Buscar</button>
+                    </form>
+                    <a href="/signUp.html" class="btn btn--primary">Cadastrar</a>
+                </div>
+                </div>
+            </nav>
+            </section>
+        
+
+
+        <section class="info-universidade">
+            <div class="header-info">
+                
+                <span>
+                    <h1 class="nome-universidade">Nome da Universidade</h1>
+                    <a href="#" class="website-universidade">Website</a>
+                    <p class="endereco-universidade">Endereco</p>
+                </span>
+                
+                
+                <button class="btn-review" onClick="document.getElementById('form-review').scrollIntoView();">Deixe sua review</button>
+            </div>
+
+            <div class="infos-relevantes">
+                <h2 class="titulo">Destaques:</h2>
+                <ul>
+                    <li>Taxa de graduacao: </li>
+                    <li>Salario pos-termino: </li>
+                    <li>Custo medio anual: </li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <section class="reviews">
+
+            <h2 class="titulo">Confira os comentarios de outras pessoas sobre esta universidade:</h2>
+
+            <ul id="reviews-list">
+                
+                <li>
+                    <div class="review-teste">
+                        <div class="nome-review">Samuel</div>
+                        <div class="comentario-review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="review-teste">
+                        <div class="nome-review">Fernando</div>
+                        <div class="comentario-review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    </div>
+                </li>
+            </ul>
+            
+
+        </section>
+        
+        <section id="form-review">
+            <h2>Conhece essa universidade? Deixe seu comentario aqui!</h2>
+            <form action="" method="post">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" />
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" />
+                </div>
+                <div>
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario"></textarea>
+                </div>
+                <div>
+                    <span class="btn-submit" onClick="newElement()">Enviar sua review</button>
+                </div>
+            </form>
+        </section>
+        <script src="scripts/universidade.js"></script>
+    </body>
+</html>
