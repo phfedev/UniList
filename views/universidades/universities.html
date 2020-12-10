@@ -18,12 +18,29 @@
     <title>Document</title>
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-dark bg-dark">
-      <a class="navbar-brand" href="../../index.html">Home</a>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" id="textSearch" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-primary my-2 my-sm-0" onclick="search()" type="submit">Pesquisar</button>
-      </form>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/"><strong>LOGO</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./universities.html">Universidades <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" aria-label="Search">
+            <button class="btn my-2 my-sm-0 btn--search" type="submit">Buscar</button>
+          </form>
+          <a href="/signUp.html" class="btn btn--primary">Cadastrar</a>
+        </div>
+      </div>
     </nav>
     <div class="" id="list">
       <ul id="listUl"></ul>

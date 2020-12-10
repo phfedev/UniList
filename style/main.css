@@ -69,6 +69,7 @@ a {
 }
 
 .navbar {
+  background-color: rgba(60, 100, 177, 0.06) !important;
   position: fixed;
   left: 0;
   top: 0;
@@ -84,9 +85,23 @@ a {
   margin-left: 16px;
 }
 
+.banner-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 .btn--primary {
   background-color: #3C64B1;
   color: white;
+  border-radius: 0;
+  margin-left: 20px;
+}
+
+.btn--secondary {
+  color: #3C64B1;
+  background-color: white;
   border-radius: 0;
   margin-left: 20px;
 }
