@@ -43,3 +43,57 @@
   margin: 0;
   text-align: center;
 }
+
+.card-dev {
+  display: flex;
+}
+
+.card-dev + .card-dev {
+  margin-top: 32px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.card-name {
+  margin-top: 16px;
+}
+
+.card-dev__info {
+  text-align: start;
+  margin-left: 32px;
+}
+
+.card-dev img {
+  max-width: 150px;
+  border-radius: 6px;
+}
+
+.card-dev p {
+  color: #373F41;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 0;
+}
+
+.card-dev p a {
+  color: #373F41;
+}
+
+.card-dev p a:hover {
+  text-decoration: none;
+}
+
+.card-dev p + p {
+  margin-top: 8px;
+}
+
+.contato-more {
+  color: #373F41;
+  font-size: 26px;
+  margin-left: 0;
+}
