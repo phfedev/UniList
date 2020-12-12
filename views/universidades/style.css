@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-  background-color: rgba(60, 100, 177, 0.06) !important;
+  background-color: #f2f5fd !important;
   position: fixed;
   left: 0;
   top: 0;
@@ -72,7 +72,7 @@ body {
   flex: 1 0 20%;
   margin: 1em;
   /* height: 15em; */
-  box-shadow: 0.1em 0.1em 0.1em 0.1em #888888;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
   padding: 1em;
   display: inline-grid;
 }

@@ -46,6 +46,7 @@
 
 .card-dev {
   display: flex;
+  align-items: center;
 }
 
 .card-dev + .card-dev {
@@ -59,10 +60,6 @@
   margin-top: 24px;
 }
 
-.card-name {
-  margin-top: 16px;
-}
-
 .card-dev__info {
   text-align: start;
   margin-left: 32px;
@@ -70,7 +67,7 @@
 
 .card-dev img {
   max-width: 150px;
-  border-radius: 6px;
+  border-radius: 100%;
 }
 
 .card-dev p {
@@ -96,4 +93,8 @@
   color: #373F41;
   font-size: 26px;
   margin-left: 0;
+}
+
+.nav-item.active {
+  font-weight: bold;
 }
