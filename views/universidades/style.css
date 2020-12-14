@@ -28,14 +28,14 @@ body {
 }
 
 .btn--primary {
-  background-color: #3C64B1;
+  background-color: #3c64b1;
   color: white;
   border-radius: 0;
   margin-left: 20px;
 }
 
 .btn--secondary {
-  color: #3C64B1;
+  color: #3c64b1;
   background-color: white;
   border-radius: 0;
   margin-left: 20px;
@@ -47,14 +47,14 @@ body {
 }
 
 .btn--search {
-  color: #3C64B1;
+  color: #3c64b1;
 }
 
 .btn--search:hover {
   color: #4770c0;
 }
 
-#list{
+#list {
   margin-top: 5em;
 }
 #listUl {
@@ -62,6 +62,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   overflow: hidden;
+  padding: 0px;
 }
 
 .card-li {
@@ -69,10 +70,10 @@ body {
   color: #1d1111;
   text-decoration: none;
   list-style: none;
-  flex: 1 0 20%;
+  flex: 1 0 30%;
   margin: 1em;
   /* height: 15em; */
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   padding: 1em;
   display: inline-grid;
 }
@@ -116,28 +117,53 @@ body {
   margin: 10px 0px 10px 0px;
 }
 
-.pag-nav{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow: hidden;
+.pag-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
-.pag-ul{
-    flex: 1 0 20%;
-    margin: 1em;
-    align-items: center;
-    justify-content: center;
+.pag-ul {
+  flex: 1 0 20%;
+  margin: 1em;
+  align-items: center;
+  justify-content: center;
 }
 
 a#pagePrev {
-    background-color: #3c64b1;
-    color: white;
-    border-radius: 0.3em;
+  background-color: #3c64b1;
+  color: white;
+  border-radius: 0.3em;
 }
 
 a#pageNext {
-    background-color: #3c64b1;
-    color: white;
-    border-radius: 0.3em;
+  background-color: #3c64b1;
+  color: white;
+  border-radius: 0.3em;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card-li {
+    background-color: white;
+    color: #1d1111;
+    text-decoration: none;
+    list-style: none;
+    flex: 1 0 91%;
+    margin: 1em;
+    /* height: 15em; */
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    display: inline-grid;
+}
+
+.navbar {
+  background-color: #f2f5fd !important;
+  position: relative;
+  left: auto;
+  top: auto;
+  height: auto;
+  width: auto;
+}
 }

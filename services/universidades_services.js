@@ -25,7 +25,7 @@ async function montarLista(page = 0) {
   }
   let response = await fetch(
     /*`${url}&fields=id,school,location&per_page=12&page=${page}&keys_nested=true`*/
-    `${url}&&fields=id,latest,school,location&per_page=12&page=${page}&keys_nested=true`
+    `${url}&&fields=id,latest,school,location&per_page=9&page=${page}&keys_nested=true`
   );
   let data = await response.json();
 
@@ -36,6 +36,8 @@ async function montarLista(page = 0) {
     /*console.log(Object.keys(lilist)[0]);*/
     var liSchool = document.createElement("li");
     liSchool.classList.add("card-li");
+    liSchool.classList.add("col-md-4");
+    liSchool.classList.add("col-sm-12");
 
     var schoolCity = document.createElement("h2");
     liSchool.appendChild(
