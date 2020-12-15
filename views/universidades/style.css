@@ -10,6 +10,7 @@ body {
   top: 0;
   height: 70px;
   width: 100%;
+  z-index: 99;
 }
 
 .nav-item.active {
@@ -141,6 +142,10 @@ a#pageNext {
   background-color: #3c64b1;
   color: white;
   border-radius: 0.3em;
+}
+
+#pageIn {
+  padding: 0 10px;
 }
 
 

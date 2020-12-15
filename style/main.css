@@ -58,6 +58,7 @@ a {
   top: 0;
   height: 70px;
   width: 100%;
+  z-index: 99;
 }
 
 .nav-item.active {

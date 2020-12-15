@@ -17,10 +17,20 @@ async function montarLista(page = 0) {
   }
   let response = await fetch(
     /*`${url}&fields=id,school,location&per_page=12&page=${page}&keys_nested=true`*/
-    `${url}&&fields=id,latest,school,location&per_page=3&page=${page}&keys_nested=true`
+    `${url}&&_fields=id,latest,school,location&per_page=3&page=${page}&keys_nested=true`
   );
   let data = await response.json();
+
+  let dataFinal = Math.floor(data.metadata.total / 3)
+  let dataRandom = Math.floor(Math.random() * dataFinal - 0) * 1
+
+  response = await fetch(
+    /*`${url}&fields=id,school,location&per_page=12&page=${page}&keys_nested=true`*/
+    `${url}&&_fields=id,latest,school,location&per_page=3&page=${dataRandom}&keys_nested=true`
+  );
   
+    data = await response.json()
+
   data.results.map((lilist, index) => {
     var liSchool = document.createElement("li");
     liSchool.classList.add("card-li");
@@ -83,7 +93,7 @@ async function montarLista(page = 0) {
     var schoolSite = document.createElement("a");
     schoolSite.classList.add("link-site");
     schoolSite.target = "_blank";
-    schoolSite.innerText = "Link";
+    schoolSite.innerText = "Saiba mais";
     if (lilist.school.school_url.includes("https" || "http")) {
       schoolSite.setAttribute("href", `${lilist.school.school_url}`);
     } else {

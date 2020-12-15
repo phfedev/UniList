@@ -29,7 +29,7 @@ async function montarLista(page = 0) {
   );
   let data = await response.json();
 
-  pageIn.innerHTML = `Página: ${data.metadata.page + 1}`;
+  pageIn.innerHTML = `Página: <strong>${data.metadata.page + 1}</strong>`;
   
   data.results.map((lilist, index) => {
     /*console.log(lilist.latest);*/
@@ -97,7 +97,7 @@ async function montarLista(page = 0) {
     var schoolSite = document.createElement("a");
     schoolSite.classList.add("link-site");
     schoolSite.target = "_blank";
-    schoolSite.innerText = "Link";
+    schoolSite.innerText = "Saiba mais";
     if (lilist.school.school_url.includes("https" || "http")) {
       schoolSite.setAttribute("href", `${lilist.school.school_url}`);
     } else {
