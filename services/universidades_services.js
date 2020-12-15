@@ -53,7 +53,6 @@ async function montarLista(page = 0) {
   );
   let data = await response.json();
 
-<<<<<<< HEAD
   pageIn.innerHTML = `Página: ${data.metadata.page + 1}`;
 
   ulList = data.results.map((lilist, index) => {
@@ -89,10 +88,6 @@ async function allData(page = 0) {
 
   pageIn.innerHTML = `Página: ${data.metadata.page + 1}`;
 
-=======
-  pageIn.innerHTML = `Página: <strong>${data.metadata.page + 1}</strong>`;
-  
->>>>>>> b5cc0f9e6c2af83172b42c85dfd34d15eb532684
   data.results.map((lilist, index) => {
     /*console.log(lilist.latest);*/
     /*console.log(Object.keys(lilist)[0]);*/
