@@ -293,4 +293,12 @@ footer > div {
     border-width: 1px;
     border-color: whitesmoke;
   }
+  .navbar {
+    background-color: #f2f5fd !important;
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+    width: auto;
+  }
 }
