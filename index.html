@@ -6,33 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Projeto do Curso de Front End">
     <meta name="author" content="Giselli Hara">
-    <title>Login</title>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <title>UniList</title>
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
   
     <link href="./style/main.css" rel="stylesheet">
   </head>
-  <body class="text-center">
+  <body class="">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#"><strong>LOGO</strong></a>
+        <a class="navbar-brand" href="./index.html"><strong>LOGO</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="./views/universidades/universities.html">Universidades <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
+              <a class="nav-link" href="./views/contato.html">Contato</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" aria-label="Search">
             <button class="btn my-2 my-sm-0 btn--search" type="submit">Buscar</button>
           </form>
-          <a href="/signUp.html" class="btn btn--primary">Cadastrar</a>
+          <a href="./views/signUp.html" class="btn btn--primary">Cadastrar</a>
         </div>
       </div>
     </nav>
@@ -44,12 +44,27 @@
         <div class="banner__info">
           <h1 class="banner__title">Conheça as melhores universidades dos Estados Unidos</h1>
           <p class="banner__subtitle">Veja a qualificação das universidades a partir de depoimentos de alunos e ex-alunos</p>
+          <div class="banner-btns">
+            <a href="./views/signUp.html" class="btn btn--primary">Cadastrar</a>
+            <a href="./views/universidades/universities.html" class="btn btn--secondary">Conheça mais</a>
+          </div>
         </div>
       </div>
     </section>
+    <div class="container" id="list">
+      <ul id="listUl"></ul>
+    </div>
+
+    <footer>
+      <div class="container">
+        2020 © UniList
+        <strong>LOGO</strong>
+      </div>
+    </footer>
   
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/popper.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="./services/home_services.js"></script>
   </body>
 </html>

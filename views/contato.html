@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Projeto do Curso de Front End">
+    <meta name="author" content="Giselli Hara">
+    <title>Login</title>
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  
+    <link href="../style/main.css" rel="stylesheet">
+    <link href="../style/contato.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><strong>LOGO</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../views/universidades/universities.html">Universidades</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Contato<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" aria-label="Search">
+            <button class="btn my-2 my-sm-0 btn--search" type="submit">Buscar</button>
+          </form>
+          <a href="./signUp.html" class="btn btn--primary">Cadastrar</a>
+        </div>
+      </div>
+    </nav>
+    <section class="container contato-section">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-12">
+        <h2 class="contato-title">Como podemos te ajudar?</h2>
+          <form action="" method="post" class="contato-form">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" />
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" />
+            </div>
+            <div>
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" rows="5"></textarea>
+            </div>
+            <div>
+                <button class="btn btn--primary" onClick="newElement()">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-12 offset-lg-2">
+          <h2 class="contato-more">Saiba mais sobre os devs:</h2>
+          <div class="card-list">
+            <div class="card-dev">
+              <img src="../images/raphael.jpg" alt="">
+              <div class="card-dev__info">
+                <p>Raphael Dantas</p>
+                <p><a href="mailto:rdccac@gmail.com">rdccac@gmail.com</a></p>
+                <p>Front-end</p>
+                <p>Design</p>
+              </div>
+            </div>
+            <div class="card-dev">
+              <img src="../images/raphael.jpg" alt="">
+              <div class="card-dev__info">
+                <p>Raphael Dantas</p>
+                <p><a href="mailto:rdccac@gmail.com">rdccac@gmail.com</a></p>
+                <p>Front-end</p>
+                <p>Design</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/popper.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

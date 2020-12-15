@@ -18,6 +18,11 @@ body {
   width: 100%;
   height: 100%;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
 .pageContent {
   width: 100%;
   height: 100%;
@@ -32,29 +37,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
-h1 {
-  color: var(--titleColor);
-  margin: 0;
-  padding: 0;
-  font-size: 6em;
-  font-weight: bolder;
-  margin-left: 1em;
-}
-h2,
-h3,
-p {
-  color: var(--txtColor);
-  font-family: Roboto;
-}
 
-h2 {
-  margin-left: 2em;
-}
-h3.slogan {
-  font-style: oblique;
-  font-size: 3em;
-  text-align: center;
-}
 .mainMenu {
   display: flex;
   flex-direction: row;
@@ -69,11 +52,13 @@ a {
 }
 
 .navbar {
+  background-color: #f2f5fd !important;
   position: fixed;
   left: 0;
   top: 0;
   height: 70px;
   width: 100%;
+  z-index: 99;
 }
 
 .nav-item.active {
@@ -84,9 +69,23 @@ a {
   margin-left: 16px;
 }
 
+.banner-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 .btn--primary {
   background-color: #3C64B1;
   color: white;
+  border-radius: 0;
+  margin-left: 20px;
+}
+
+.btn--secondary {
+  color: #3C64B1;
+  background-color: white;
   border-radius: 0;
   margin-left: 20px;
 }
@@ -147,12 +146,14 @@ figure {
   color: white;
   font-size: 44px;
   margin: 0;
+  text-align: center;
 }
 
 .banner__subtitle {
   color: white;
   font-size: 16px;
   margin-top: 32px;
+  text-align: center;
 }
 
 .banner__info {
@@ -164,8 +165,91 @@ figure {
   height: 100%;
 }
 
+#list{
+  margin-top: 5em;
+}
+#listUl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.card-li {
+  background-color: white;
+  color: #1d1111;
+  text-decoration: none;
+  list-style: none;
+  flex: 1 0 20%;
+  margin: 1em;
+  /* height: 15em; */
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+  padding: 1em;
+  display: inline-grid;
+}
+
+.card-li h1 {
+  font-size: 1.3em;
+}
+.card-li h2 {
+  font-size: 1em;
+}
+
+.card-li h3 span {
+  color: #3c64b1;
+  font-weight: bolder;
+}
+
+.card-li h3 {
+  font-size: 1em;
+}
+
+.link-site {
+  color: #d6d6d6;
+  background-color: #3c64b1;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.link-site:hover {
+  color: white;
+  background-color: #3f51b5;
+  text-decoration: none;
+}
+
+.btn--search {
+  color: #3C64B1;
+}
+
+.btn--search:hover {
+  color: #4770c0;
+}
+
+footer {
+  margin-top: 60px;
+  border-top: 1px solid #e7e7e7;
+  padding: 20px;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 @media (max-width: 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+    padding-top: 0px;
+    width: 100%;
+    height: 100%;
+}
   h1,
   h2,
   h3 {
@@ -217,4 +301,24 @@ figure {
     border-width: 1px;
     border-color: whitesmoke;
   }
+  .navbar {
+    background-color: #f2f5fd !important;
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+    width: auto;
+  }
+  .card-li {
+    background-color: white;
+    color: #1d1111;
+    text-decoration: none;
+    list-style: none;
+    flex: 1 0 91%;
+    margin: 1em;
+    /* height: 15em; */
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    display: inline-grid;
+}
 }

@@ -1,0 +1,100 @@
+.contato-form {
+  margin-top: 24px;
+}
+
+.contato-form > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contato-form > div + div {
+  margin-top: 16px;
+}
+
+.contato-form > div:last-of-type {
+  align-items: flex-end;
+}
+
+.contato-form input {
+  height: 35px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  border: 1px solid #3C64B1;
+  border-radius: 4px;
+  resize: none;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.contato-section {
+  margin-top: 100px;
+}
+
+.btn--primary {
+  margin-left: 0;
+}
+
+.contato-title {
+  color: #373F41;
+  font-size: 26px;
+  margin: 0;
+  text-align: center;
+}
+
+.card-dev {
+  display: flex;
+  align-items: center;
+}
+
+.card-dev + .card-dev {
+  margin-top: 32px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.card-dev__info {
+  text-align: start;
+  margin-left: 32px;
+}
+
+.card-dev img {
+  max-width: 150px;
+  border-radius: 100%;
+}
+
+.card-dev p {
+  color: #373F41;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 0;
+}
+
+.card-dev p a {
+  color: #373F41;
+}
+
+.card-dev p a:hover {
+  text-decoration: none;
+}
+
+.card-dev p + p {
+  margin-top: 8px;
+}
+
+.contato-more {
+  color: #373F41;
+  font-size: 26px;
+  margin-left: 0;
+}
+
+.nav-item.active {
+  font-weight: bold;
+}

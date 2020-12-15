@@ -49,10 +49,11 @@ async function montarLista(page = 0) {
   }
   let response = await fetch(
     /*`${url}&fields=id,school,location&per_page=12&page=${page}&keys_nested=true`*/
-    `${url}&&fields=id,latest,school,location&per_page=12&page=${page}&keys_nested=true`
+    `${url}&&fields=id,latest,school,location&per_page=9&page=${page}&keys_nested=true`
   );
   let data = await response.json();
 
+<<<<<<< HEAD
   pageIn.innerHTML = `Página: ${data.metadata.page + 1}`;
 
   ulList = data.results.map((lilist, index) => {
@@ -88,11 +89,17 @@ async function allData(page = 0) {
 
   pageIn.innerHTML = `Página: ${data.metadata.page + 1}`;
 
+=======
+  pageIn.innerHTML = `Página: <strong>${data.metadata.page + 1}</strong>`;
+  
+>>>>>>> b5cc0f9e6c2af83172b42c85dfd34d15eb532684
   data.results.map((lilist, index) => {
     /*console.log(lilist.latest);*/
     /*console.log(Object.keys(lilist)[0]);*/
     var liSchool = document.createElement("li");
     liSchool.classList.add("card-li");
+    liSchool.classList.add("col-md-4");
+    liSchool.classList.add("col-sm-12");
 
     var schoolCity = document.createElement("h2");
     liSchool.appendChild(
@@ -151,7 +158,7 @@ async function allData(page = 0) {
     var schoolSite = document.createElement("a");
     schoolSite.classList.add("link-site");
     schoolSite.target = "_blank";
-    schoolSite.innerText = "Link";
+    schoolSite.innerText = "Saiba mais";
     if (lilist.school.school_url.includes("https" || "http")) {
       schoolSite.setAttribute("href", `${lilist.school.school_url}`);
     } else {
