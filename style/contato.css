@@ -95,3 +95,14 @@
 .nav-item.active {
   font-weight: bold;
 }
+
+footer {
+  margin-top: 60px;
+  border-top: 1px solid #e7e7e7;
+  padding: 20px;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+}

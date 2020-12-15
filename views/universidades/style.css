@@ -148,6 +148,17 @@ a#pageNext {
   padding: 0 10px;
 }
 
+footer {
+  margin-top: 60px;
+  border-top: 1px solid #e7e7e7;
+  padding: 20px;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 @media only screen and (max-width: 600px) {
   .card-li {
