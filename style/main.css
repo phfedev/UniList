@@ -214,6 +214,7 @@ figure {
   height: 2em;
   text-align: center;
   padding-top: 4px;
+  margin-top: 8px;
 }
 
 .link-site:hover {
