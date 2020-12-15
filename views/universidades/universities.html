@@ -21,8 +21,20 @@
     <nav class="navbar fixed-top navbar-dark bg-dark">
       <a class="navbar-brand" href="../../index.html">Home</a>
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" id="textSearch" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-primary my-2 my-sm-0" onclick="search()" type="submit">Pesquisar</button>
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          id="textSearch"
+          placeholder="Pesquisar"
+          aria-label="Pesquisar"
+        />
+        <button
+          id="search-button"
+          class="btn btn-primary my-2 my-sm-0"
+          type="submit"
+        >
+          Pesquisar
+        </button>
       </form>
     </nav>
     <div class="" id="list">
@@ -30,7 +42,6 @@
     </div>
     <nav aria-label="Page navigation example" class="pag-nav">
       <ul class="pagination pag-ul">
-        
         <li class="page-item">
           <a id="pagePrev" class="page-link" href="#" aria-label="Previous">
             <span aria-hidden="true"><</span>

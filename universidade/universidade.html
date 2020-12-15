@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="styles/universidade.css">
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/reviews.css">
     
     <title>UniList</title>
 </head>
@@ -13,26 +14,28 @@
         <section>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
-                <a class="navbar-brand" href="#"><strong>LOGO</strong></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <a class="navbar-brand" href="#"><strong>LOGO</strong></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 
-                <div class="collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Universidades <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" aria-label="Search">
-                    <button class="btn my-2 my-sm-0 btn--search" type="submit">Buscar</button>
-                    </form>
-                    <a href="/signUp.html" class="btn btn--primary">Cadastrar</a>
-                </div>
+                    <div class="collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Universidades <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                        </ul>
+                        <div class="form-inline my-2 my-lg-0 row">
+                        <input id="search" class="form-control mr-sm-2" type="search" aria-label="Search">
+                        </div>
+                        
+                        <a href="/signUp.html" class="btn btn--primary">Cadastrar</a>
+                        <div id="match-list"></div>
+                    </div>
+                    
                 </div>
             </nav>
             </section>
@@ -43,9 +46,9 @@
             <div class="header-info">
                 
                 <span>
-                    <h1 class="nome-universidade">Nome da Universidade</h1>
-                    <a href="#" class="website-universidade">Website</a>
-                    <p class="endereco-universidade">Endereco</p>
+                    <h1 id="universityName" class="nome-universidade">Nome da Universidade</h1>
+                    <a id="universityWebsite" class="website-universidade">Website</a>
+                    <p id="universityAddress" class="endereco-universidade">Endereco</p>
                 </span>
                 
                 
@@ -55,9 +58,9 @@
             <div class="infos-relevantes">
                 <h2 class="titulo">Destaques:</h2>
                 <ul>
-                    <li>Taxa de graduacao: </li>
-                    <li>Salario pos-termino: </li>
-                    <li>Custo medio anual: </li>
+                    <li>Taxa de graduacao: <h4 id="graduationRate"></h4> </li>
+                    <li>Salario pos-termino: <h4 id="initialSalary"></h4></li>
+                    <li>Custo medio anual: <h4 id="annualCost"></h4></li>
                 </ul>
             </div>
             
