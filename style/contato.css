@@ -33,10 +33,6 @@
   margin-top: 100px;
 }
 
-.btn--primary {
-  margin-left: 0;
-}
-
 .contato-title {
   color: #373F41;
   font-size: 26px;
@@ -70,6 +66,7 @@
 }
 
 .card-dev img {
+  height: 150px;
   width: 150px;
   border-radius: 100%;
 }
